@@ -2,19 +2,17 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-replicaCount: 1
+replicaCount: 2
 
 # awx_web & tasks are deployed in the same pod
 awx_web:
   image:
     repository: ansible/awx_web
-    tag: 10-71
     pullPolicy: IfNotPresent
 
 awx_task:
   image:
     repository: ansible/awx_task
-    tag: 10-71
     pullPolicy: IfNotPresent
 
 imagePullSecrets: []
@@ -30,7 +28,6 @@ deployment:
 
 service:
   internalPort: 8052
-  externalPort: 8052
 
 ingress:
   enabled: false
