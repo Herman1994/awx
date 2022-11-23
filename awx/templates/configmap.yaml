@@ -137,7 +137,7 @@ data:
     JOBOUTPUT_ROOT = '/var/lib/awx/job_status'
     SECRET_KEY = open('/etc/tower/SECRET_KEY', 'rb').read().strip()
     ALLOWED_HOSTS = ['*']
-    INTERNAL_API_URL = 'http://127.0.0.1:8052'
+    INTERNAL_API_URL = 'http://127.0.0.1:8080'
     SERVER_EMAIL = 'root@localhost'
     DEFAULT_FROM_EMAIL = 'webmaster@localhost'
     EMAIL_SUBJECT_PREFIX = '[AWX] '
@@ -190,6 +190,6 @@ data:
     }
 
     AWX_CONTAINER_GROUP_DEFAULT_IMAGE = 'ansible/ansible-runner'
-    BROADCAST_WEBSOCKET_PORT = 8052
+    BROADCAST_WEBSOCKET_PORT = 8080
     BROADCAST_WEBSOCKET_PROTOCOL = 'http'
     USE_X_FORWARDED_PORT = True
